@@ -35,6 +35,7 @@ gem 'jquery-rails'
 
 gem 'spree', '2.0.4'
 gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git',:branch => "2-0-stable"
+gem 'spree_shipment', :path => 'extensions/spree_shipment'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

@@ -10,6 +10,12 @@ GIT
       spree_core (~> 2.0.0)
       spree_frontend (~> 2.0.0)
 
+PATH
+  remote: extensions/spree_shipment
+  specs:
+    spree_shipment (2.0.4)
+      spree_core (~> 2.0.4)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -261,5 +267,6 @@ DEPENDENCIES
   sass-rails (~> 3.2.3)
   spree (= 2.0.4)
   spree_auth_devise!
+  spree_shipment!
   thin
   uglifier (>= 1.0.3)
