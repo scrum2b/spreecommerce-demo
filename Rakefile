@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Spree2Shipping::Application.load_tasks
+Spree2Package::Application.load_tasks
