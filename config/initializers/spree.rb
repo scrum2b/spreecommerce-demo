@@ -9,6 +9,7 @@ Spree.config do |config|
   # Example:
   # Uncomment to override the default site name.
   config.site_name = "Scrum2B Spree2 Demo Site"
+  config.logo = "s2b_spree_logo.png"
 end
 
 Spree.user_class = "Spree::User"
