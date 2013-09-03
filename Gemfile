@@ -7,8 +7,8 @@ gem 'rails', '3.2.14'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 group :development do
-#  gem 'sqlite3'
-  gem 'pg'
+  gem 'sqlite3'
+  #gem 'pg'
 end
 
 group :production do 
@@ -34,7 +34,8 @@ gem 'jquery-rails'
 gem 'spree', '2.0.4'
 gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git',:branch => "2-0-stable"
 gem 'spree_shipment', :path => 'extensions/spree_shipment'
-
+#gem 'spree_spree2_clothes_shop',:git => 'https://github.com/scrum2b/spree2_clothes_shop.git'
+gem 'spree_spree2_clothes_shop',:path => 'extensions/spree_spree2_clothes_shop'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

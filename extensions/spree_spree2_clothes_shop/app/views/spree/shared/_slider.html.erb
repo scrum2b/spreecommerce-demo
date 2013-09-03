@@ -1,0 +1,21 @@
+<div id="slider" style="position: relative">
+    <ul class="bxslider">
+      <li><%= image_tag("store/slider1.jpg",:width => "100%")%></li>
+      <li><%= image_tag("store/slider2.jpg",:width => "100%")%></li>
+    </ul>
+    <p class="bx-next" style="font-size: 110px;position: absolute;right: 150px; top:40%"></p>
+    <p class="bx-prev" style="font-size: 110px;position: absolute;left: 150px; top:40%"></p>
+</div>
+
+<script>
+  $(document).ready(function(){
+    $('.bxslider').bxSlider({
+      nextSelector: '.bx-next',
+      prevSelector: '.bx-prev',
+      nextText: '>',
+      prevText: '<',
+      auto: true,
+      autoControls: true
+    });
+  });
+</script>

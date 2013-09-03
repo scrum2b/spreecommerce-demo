@@ -1,0 +1,63 @@
+/*
+ *= require store/spree_frontend
+*/
+header#header .row{
+  margin-left:0px !important;
+}
+#wrapper .row{
+  margin:0px !important;
+}
+#slider{
+  display:none;
+  background:#f7f7f7;
+  border:1px solid #f7f7f7;
+  height: 430px;
+  margin-bottom:30px;
+}
+#slider ul li img{
+  margin-left: -25px;
+}
+.bx-next a, .bx-prev a{
+  color: black
+}
+.bx-next a:hover, .bx-prev a:hover{
+  text-decoration:none;
+}
+footer#footer{
+  padding-top:0px;
+  border-top:none;
+}
+.footer-top {
+  display: block
+}
+.footer-top ul li{
+  line-height: 40px;
+  text-align: center;
+  display:inline;
+  color: white;
+  border-right: 1px solid #e4e4e4;
+  padding:0 7px;
+}
+.footer-top ul li:last-child{
+  border-right:none;
+}
+.footer-top ul.top-left{
+  float:left;
+  margin-left:0px;
+}
+.footer-top ul.top-right{
+  float:right
+}
+.clo-footer h3{
+  border-bottom: 1px dashed black;
+  margin-bottom:15px;
+}
+.clo-footer ul{
+  margin:0px;
+}
+.clo-footer ul li{
+list-style: none;
+}
+#footer .container .span3:first-child{
+  margin:0px;
+}

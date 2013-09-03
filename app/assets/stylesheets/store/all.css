@@ -7,5 +7,7 @@
  *= require store/spree_frontend
 
  *= require_self
+ *= require store/spree_spree2_clothes_shop
  *= require_tree .
+ 
 */

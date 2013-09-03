@@ -8,5 +8,5 @@
 //= require jquery_ujs
 
 //= require store/spree_frontend
-
+//= require store/spree_spree2_clothes_shop
 //= require_tree .
