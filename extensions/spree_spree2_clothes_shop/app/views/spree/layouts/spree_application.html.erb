@@ -8,18 +8,24 @@
     <%= render :partial => 'spree/shared/head' %>
   </head>
   <body class="<%= body_class %>" id="<%= @body_id || 'default' %>" data-hook="body">
-      
-    <div class="container">
-
-      <%= render :partial => 'spree/shared/header' %>
-    </div>
+<header id="header"  data-hook>
+  <div class="container">
+  	<nav style="position: relative">
+  		<div style="float: left;vertical-align: middle">
+  			<figure id="logo" class="columns six" data-hook"><%= logo %></figure>
+  		</div>
+  	<%= render :partial => 'spree/shared/nav_bar' %>
+  	</nav>
+  </div>
+  	<%= render :partial => 'spree/shared/main_nav_bar' %>
+</header>
       <div id="wrapper"  data-hook>
         <%= render :partial => 'spree/shared/slider' %>
         <div class="container">
           <%= breadcrumbs(@taxon) %>
   
           <%= render :partial => 'spree/shared/sidebar' if content_for? :sidebar %>
-          <div id="content" class="columns <%= !content_for?(:sidebar) ? "sixteen" : "twelve" %>" data-hook>
+          <div data-hook>
             <%= flash_messages %>
             <%= yield %>
           </div>

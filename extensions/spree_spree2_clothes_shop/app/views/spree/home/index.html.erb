@@ -1,9 +1,36 @@
-
+<div id="popular_categories" class="row-fluid" style="margin-bottom: 30px;">
+  <div class="span6">
+    <h4>Popular Categories</h4>
+     <div style="display: block;text-align: right;margin-bottom: 3px;">
+       <input type="button" value="<" />
+       <input type="button" value=">" />
+     </div>
+    <div class="row-fluid">
+      <div class="span6">
+        <%= image_tag("store/image01.jpg",:width => "100%",:class => "img-polaroid")%>
+      </div>
+      <div class="span6">
+        <%= image_tag("store/image01.jpg",:width => "100%",:class => "img-polaroid")%>
+      </div>
+      <div class="clearfix"></div>
+      <div class="span6" style="margin-left: 0px">
+        <%= image_tag("store/image01.jpg",:width => "100%",:class => "img-polaroid")%>
+      </div>
+      <div class="span6">
+        <%= image_tag("store/image01.jpg",:width => "100%",:class => "img-polaroid")%>
+      </div>
+    </div>
+  </div>
+  <div class="span6" style="height:540px;">
+    <%= image_tag("store/image01.jpg",:style=>"height:100%")%>
+  </div>
+</div>
 <div data-hook="homepage_products">
   <%= render :partial => 'spree/shared/products', :locals => { :products => @products } %>
 </div>
+
 <style>
-#slider{
+.slide{
   display: block;
 }
 </style>

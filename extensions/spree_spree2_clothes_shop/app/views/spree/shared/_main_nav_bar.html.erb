@@ -1,0 +1,30 @@
+<nav class="columns sixteen">
+<ul id="main-nav-bar" class="inline" data-hook>
+	<div class="container">
+	<li id="home-link" data-hook><%= link_to t(:home), root_path %></li>
+	<li>
+		<a href="#">Categories</a>
+		<ul>
+			<li><a href="#">Bags</a></li>
+			<li><a href="#">Clothes</a></li>
+			<li><a href="#">Development tools</a></li>
+			<li><a href="#">Web design</a></li>
+		</ul>
+	</li>
+	<li><a href="#">About</a></li>
+	<li><a href="#">Contact</a></li>
+	</div>
+</ul>
+</nav>
+<script>
+	$(function() {
+  if ($.browser.msie && $.browser.version.substr(0,1)<7)
+  {
+	$('li').has('ul').mouseover(function(){
+		$(this).children('ul').css('visibility','visible');
+		}).mouseout(function(){
+		$(this).children('ul').css('visibility','hidden');
+		})
+  }
+}); 
+</script>
