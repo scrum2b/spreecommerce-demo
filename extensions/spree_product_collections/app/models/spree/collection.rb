@@ -10,6 +10,10 @@ module Spree
 
     make_permalink :order => :name
 
+    def to_param
+      permalink.present? ? permalink :  name.to_s.to_url
+    end
+
   end
 
 end

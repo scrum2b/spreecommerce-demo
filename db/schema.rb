@@ -107,6 +107,7 @@ ActiveRecord::Schema.define(:version => 20130909123828) do
     t.string   "name"
     t.string   "permalink"
     t.string   "description"
+    t.integer  "position"
     t.string   "keywords"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false

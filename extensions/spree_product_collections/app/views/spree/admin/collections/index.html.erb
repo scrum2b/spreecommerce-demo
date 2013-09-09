@@ -1,0 +1,54 @@
+<% content_for :page_title do %>
+  <%= Spree.t(:listing_collections) %>
+<% end %>
+
+<% content_for :page_actions do %>
+  <div class="toolbar" data-hook="toolbar">
+    <ul class="actions header-action-links inline-menu">
+      <li id="new_collection_link">
+        <%= button_link_to Spree.t(:new_collection), new_admin_collection_url, { :remote => true, :icon => 'icon-plus', :id => 'admin_new_collection' } %>
+      </li>
+    </ul>
+  </div>
+<% end %>
+
+<%= render :partial => 'spree/admin/shared/product_sub_menu' %>
+
+<div id="new_collection" data-hook></div>
+
+<% if @collections.any? %>
+  <table class="index" id="listing_collections">
+    <colgroup>
+      <col style="width: 25%;">
+      <col style="width: 50%;">
+      <col style="width: 25%;">
+    </colgroup>
+    <thead>
+      <tr data-hook="admin_collections_index_headers">
+        <th><%= Spree.t(:name) %></th>
+        <th><%= Spree.t(:description) %></th>
+        <th data-hook="admin_collections_index_header_actions" class="actions"></th>
+      </tr>  
+    </thead>  
+    <tbody>
+      <% @collections.each do |collection| %>
+        <tr id="<%= spree_dom_id collection %>" data-hook="admin_collections_index_rows" class="<%= cycle('odd', 'even') %>">
+          <td><%= link_to collection.try(:name), edit_admin_collection_path(collection) %></td>
+          <td class="align-center"><%= collection.description %></td>
+            
+			    <td class="actions" data-hook="admin_collections_index_row_actions">
+            <%= link_to_edit collection, :no_text => true, :class => 'edit'  %>
+            &nbsp;
+            <%= link_to_delete collection, :no_text => true  %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <div class="no-objects-found">
+    <%= Spree.t(:no_results) %>
+  </div>
+<% end %>
+
+<%= paginate @collections %>
