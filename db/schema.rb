@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130830185802) do
+ActiveRecord::Schema.define(:version => 20130909123828) do
 
   create_table "spree_activators", :force => true do |t|
     t.string   "description"
@@ -90,6 +90,26 @@ ActiveRecord::Schema.define(:version => 20130830185802) do
     t.string   "calculable_type"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+  end
+
+  create_table "spree_collection_products", :force => true do |t|
+    t.integer  "collection_id"
+    t.integer  "product_id"
+    t.integer  "position"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  add_index "spree_collection_products", ["collection_id", "position"], :name => "index_spree_collection_products_on_collection_id_and_position"
+  add_index "spree_collection_products", ["product_id"], :name => "index_spree_collection_products_on_product_id"
+
+  create_table "spree_collections", :force => true do |t|
+    t.string   "name"
+    t.string   "permalink"
+    t.string   "description"
+    t.string   "keywords"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "spree_configurations", :force => true do |t|

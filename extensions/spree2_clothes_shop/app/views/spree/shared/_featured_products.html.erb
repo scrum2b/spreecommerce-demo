@@ -1,0 +1,49 @@
+<h3>Featured Products</h3>
+<div class="row-fluid">
+<% if products.empty? %>
+  <%= Spree.t(:no_products_found) %>
+<% elsif params.key?(:keywords) %>
+  <h6 class="search-results-title"><%= Spree.t(:search_results, :keywords => h(params[:keywords])) %></h6>
+<% end %>
+
+<% if products.any? %>
+  <div id="featured-products">
+    <div style="float: right">
+      <a href="#" class="buttons prev "><input type="button" value="<" /></a>
+      <a href="#" class="buttons next "><input type="button" value=">" /></a>
+    </div>
+    <div class="viewport">                           
+      <ul id="products" class="overview ul-featured_product"  data-hook>
+        <% products.each do |product| %>
+            <li id="product_<%= product.id %>" class="product_loop li_featured_product <%= cycle("alpha", "secondary", "", "omega secondary", :name => "classes") %>" data-hook="products_list_item" itemscope itemtype="http://schema.org/Product" >
+              <%= form_for :order, :url => populate_orders_path do |f| %>
+              <div class="product-image">
+                <%= link_to small_image(product, :itemprop => "image"), product, :itemprop => 'url' %>
+              </div>
+              <%= link_to truncate(product.name, :length => 50), product, :class => 'info', :itemprop => "name", :title => product.name %>
+              <span class="price selling" itemprop="price"><%= display_price(product) %></span>
+              <div style="position: absolute;bottom: 0px;left: 30px;">
+                <%= link_to "Detail", product, :itemprop => 'url', :class => "btn", :style =>"float:left;margin-right:10px;" %>
+                <%= hidden_field_tag (product.variants_and_option_values.any? ? :quantity : "variants[#{product.master.id}]"),
+                  1, :class => 'title', :min => 1 %>
+                <%= button_tag :class => 'primary', :id => 'add-to-cart-button', :type => :submit do %>
+                  <%= Spree.t(:add_to_cart) %>
+                <% end %>
+              </div>
+              <% end %>
+            </li>
+
+        <% end %>
+        <% reset_cycle("classes") %>
+      </ul>
+    </div>
+  </div>
+<% end %>
+</div>
+<script  type="text/javascript">
+  $('#featured-products').tinycarousel({ 
+     interval: true,
+     display: 5,
+     intervaltime: 10000,
+  });
+</script>

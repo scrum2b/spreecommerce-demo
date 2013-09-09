@@ -35,7 +35,11 @@ gem 'spree', '2.0.4'
 gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git',:branch => "2-0-stable"
 gem 'spree_shipment', :path => 'extensions/spree_shipment'
 #gem 'spree_spree2_clothes_shop',:git => 'https://github.com/scrum2b/spree2_clothes_shop.git'
-gem 'spree_spree2_clothes_shop',:path => 'extensions/spree_spree2_clothes_shop'
+gem 'spree_spree2_clothes_shop',:path => 'extensions/spree2_clothes_shop'
+
+#gem 'spree_product_collections', :path => 'extensions/spree_product_collections', group: :development
+gem 'spree_product_collections', github: 'scrum2b/spree_product_collections', group: :production
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

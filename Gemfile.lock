@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/scrum2b/spree_product_collections.git
+  revision: c03659c2fb2d13813eb970dae20c32ef5173acbd
+  specs:
+    spree_product_collections (2.0.4)
+      spree_core (~> 2.0.4)
+
+GIT
   remote: https://github.com/spree/spree_auth_devise.git
   revision: 3a1aa02e73d3f6bcbb834a47366c41f6e5ca1049
   branch: 2-0-stable
@@ -11,15 +18,15 @@ GIT
       spree_frontend (~> 2.0.0)
 
 PATH
-  remote: extensions/spree_shipment
+  remote: extensions/spree2_clothes_shop
   specs:
-    spree_shipment (2.0.4)
+    spree_spree2_clothes_shop (2.0.4)
       spree_core (~> 2.0.4)
 
 PATH
-  remote: extensions/spree_spree2_clothes_shop
+  remote: extensions/spree_shipment
   specs:
-    spree_spree2_clothes_shop (2.0.4)
+    spree_shipment (2.0.4)
       spree_core (~> 2.0.4)
 
 GEM
@@ -274,6 +281,7 @@ DEPENDENCIES
   sass-rails (~> 3.2.3)
   spree (= 2.0.4)
   spree_auth_devise!
+  spree_product_collections!
   spree_shipment!
   spree_spree2_clothes_shop!
   sqlite3

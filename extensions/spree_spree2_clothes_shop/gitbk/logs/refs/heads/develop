@@ -1,5 +1,0 @@
-0000000000000000000000000000000000000000 d3725b684066f63209958ab6c1785a629d168044 Hung Kieu Viet <hungkv@ithanoi.com> 1378196233 +0700	branch: Created from origin/develop
-d3725b684066f63209958ab6c1785a629d168044 d15e19df489fd590fbbc151ac8a985266bff4309 Hung Kieu Viet <hungkv@ithanoi.com> 1378205943 +0700	merge origin/develop: Fast-forward
-d15e19df489fd590fbbc151ac8a985266bff4309 8745291971c91c6cd2298bc2c6bd3a0b90848e84 Hung Kieu Viet <hungkv@ithanoi.com> 1378278936 +0700	commit: add menu_nav_bar
-8745291971c91c6cd2298bc2c6bd3a0b90848e84 f0431eaba693d249a56f83491c3244a68224b27e Hung Kieu Viet <hungkv@ithanoi.com> 1378278941 +0700	merge origin/develop: Merge made by the 'recursive' strategy.
-f0431eaba693d249a56f83491c3244a68224b27e a48d9cd327443f61d4cd21dd1cd38eec40579f7d Hung Kieu Viet <hungkv@ithanoi.com> 1378296906 +0700	commit: create menu bar

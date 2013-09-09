@@ -1,0 +1,24 @@
+<div style="float: right;list-style: none; margin-top: 30px">
+  <ul class="nav-user">
+    <% if spree_current_user %>
+      <li style="float: left">
+        Logged in as: 
+      </li>
+      <li style="float: left" >
+        <%=  spree_current_user.email %>
+      </li>
+      <li style="float: left" >
+        <%= link_to Spree.t(:logout), spree_logout_path %>
+      </li>
+    <% else %>
+      <li style="float: left" >
+        <%= link_to Spree.t(:login), spree_login_path %>
+      </li>
+      <li style="float: left">Or</li>
+      <li style="float: left" >
+        <%= link_to Spree.t(:signup), spree_signup_path %>
+      </li>
+    <% end %>
+  <li id="link-to-cart" class="btn" data-hook style="list-style: none;float: left;margin-right: 20px"><i class=" icon-large icon-shopping-cart"><%= link_to_cart %></i></li>
+  </ul>
+</div>
