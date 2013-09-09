@@ -8,5 +8,6 @@
 //= require jquery_ujs
 
 //= require admin/spree_backend
+//= require admin/spree_product_collections
 //= require admin/spree_spree2_clothes_shop
 //= require_tree .
