@@ -4,100 +4,103 @@
 <!--[if IE 8 ]>    <html class="ie ie8" lang="<%= I18n.locale %>"> <![endif]-->
 <!--[if IE 9 ]>    <html class="ie ie9" lang="<%= I18n.locale %>"> <![endif]-->
 <!--[if gt IE 9]><!--><html lang="<%= I18n.locale %>"><!--<![endif]-->
-  <head data-hook="inside_head">
-    <%= render :partial => 'spree/shared/head' %>
-  </head>
-  <body class="<%= body_class %>" id="<%= @body_id || 'default' %>" data-hook="body">
-<header id="header"  data-hook>
-  <div class="container">
-  	<nav style="position: relative">
-  		<div style="float: left;vertical-align: middle">
-  			<figure id="logo" class="columns six" data-hook"><%= logo %></figure>
-  		</div>
-  	<%= render :partial => 'spree/shared/nav_bar' %>
-  	</nav>
-  </div>
-  	<%= render :partial => 'spree/shared/main_nav_bar' %>
-</header>
-<div id="wrapper"  data-hook>
-  <%= render :partial => 'spree/shared/slide' %>
-  <div class="container">
-    <%= breadcrumbs(@taxon) %>
-
-    <%= render :partial => 'spree/shared/sidebar' if content_for? :sidebar %>
-    <div data-hook>
-      <%= flash_messages %>
-      <%= yield %>
-    </div>
-
-    <%= yield :templates %>
-  </div>
-</div>
-<section  id="mega_nav_categories">
-  <div class="bg_mega_nav">
+<head data-hook="inside_head">
+  <%= render :partial => 'spree/shared/head' %>
+</head>
+<body class="<%= body_class %>" id="<%= @body_id || 'default' %>" data-hook="body">
+  <header id="header"  data-hook>
     <div class="container">
-      <div class="row-fluid main-mega">      
-      <% @nav_link.each do |category,links|%>
-          <div class="clo-mega-nav span6">
+    	<nav style="position: relative">
+    		<div style="float: left;vertical-align: middle">
+    			<figure id="logo" class="columns six" data-hook"><%= logo %></figure>
+    		</div>
+    	<%= render :partial => 'spree/shared/nav_bar' %>
+    	</nav>
+    </div>
+  	<%= render :partial => 'spree/shared/main_nav_bar' %>
+  </header>
+
+  <div id="wrapper"  data-hook>
+    <%= render :partial => 'spree/shared/slide' %>
+    <div class="container">
+      <%= breadcrumbs(@taxon) %>
+  
+      <%= render :partial => 'spree/shared/sidebar' if content_for? :sidebar %>
+      <div data-hook>
+        <%= flash_messages %>
+        <%= yield %>
+      </div>
+  
+      <%= yield :templates %>
+    </div>
+  </div>
+
+  <section  id="mega_nav_categories">
+    <div class="bg_mega_nav">
+      <div class="container">
+        <div class="row-fluid main-mega">      
+          <% @nav_link.each do |category,links|%>
+            <div class="clo-mega-nav span6">
+              <p style="color: white;text-transform: uppercase;font-size: 20px;font-weight: bold;border-bottom:none;box-shadow: 0 1px 0 #111, 0 2px 0 #666;"><%= category%></p> 
+              <ul class="list-category">
+                <% links.each do |link|%>
+                <li><%= link_to link.name, :controller => "taxons", :action => "show", :id => link.permalink %></li>
+                <% end %>
+              </ul>
+              <% if links.length > 6 %>
+              <a href="#" value="#show-more-<%= category%>" style="font-size: 16px;text-decoration: none;color: #FAFAFA" class="show-more"">More...</a>
+              <% end %>
+            </div>  
+          <% end %> 
+        </div>    
+        <% @nav_link.each do |category,links|%>
+          <div class="row-fluid show-more-mega span12" id="show-more-<%= category%>">
             <p style="color: white;text-transform: uppercase;font-size: 20px;font-weight: bold;border-bottom:none;box-shadow: 0 1px 0 #111, 0 2px 0 #666;"><%= category%></p> 
-            <ul class="list-category">
-              <% links.each do |link|%>
-              <li><%= link_to link.name, :controller => "taxons", :action => "show", :id => link.permalink %></li>
+            <p class="show-main-mega"></p>
+            <ul class="list-more-category">
+              <% links.each_with_index do |link,index|%>
+              <li class="span2" style=" <% if index%6 ==0%> margin-left:0px <% end %>"><%= link_to link.name, :controller => "taxons", :action => "show", :id => link.permalink %></li>
               <% end %>
             </ul>
-            <% if links.length > 6 %>
-            <a href="#" value="#show-more-<%= category%>" style="font-size: 16px;text-decoration: none;color: #FAFAFA" class="show-more"">More...</a>
-            <% end %>
           </div>  
-      <% end %> 
-      </div>    
-      <% @nav_link.each do |category,links|%>
-        <div class="row-fluid show-more-mega span12" id="show-more-<%= category%>">
-          <p style="color: white;text-transform: uppercase;font-size: 20px;font-weight: bold;border-bottom:none;box-shadow: 0 1px 0 #111, 0 2px 0 #666;"><%= category%></p> 
-          <p class="show-main-mega"></p>
-          <ul class="list-more-category">
-            <% links.each_with_index do |link,index|%>
-            <li class="span2" style=" <% if index%6 ==0%> margin-left:0px <% end %>"><%= link_to link.name, :controller => "taxons", :action => "show", :id => link.permalink %></li>
-            <% end %>
-          </ul>
-        </div>  
-      <% end %> 
-    </div>
-  </div>              
-</section>
-<%= render :partial => 'spree/shared/footer' %>
+        <% end %> 
+      </div>
+    </div>              
+  </section>
+  <%= render :partial => 'spree/shared/footer' %>
 
-<%= render :partial => 'spree/shared/google_analytics' %>
-<script>
-  Spree.api_key = <%= raw(try_spree_current_user.try(:spree_api_key).to_s.inspect) %>;
-   
-  function meganav(){                
-    $("#mega_nav_categories").hover(function(e) {
-      $(this).show();
+  <%= render :partial => 'spree/shared/google_analytics' %>
+  <script>
+    Spree.api_key = <%= raw(try_spree_current_user.try(:spree_api_key).to_s.inspect) %>;
+     
+    function meganav(){                
+      $("#mega_nav_categories").hover(function(e) {
+        $(this).show();
+      },function(){
+        $(this).hide();
+      });
+    }
+    
+    $('#main-nav-bar li').hover(function(e) {
+      if($(this).hasClass('li-category')){
+        $("#mega_nav_categories").show();            
+        meganav();
+      }else{
+        $('#mega_nav_categories').hide();
+      }
     },function(){
-      $(this).hide();
+      $("#mega_nav_categories").hide();
     });
-  }
-  
-  $('#main-nav-bar li').hover(function(e) {
-   if($(this).hasClass('li-category')){
-     $("#mega_nav_categories").show();            
-     meganav();
-   }else{
-     $('#mega_nav_categories').hide();
-   }
- },function(){
-     $("#mega_nav_categories").hide();
- });
- $('.show-more').click(function(){
-   var div_show_more = $(this).attr('value');
-   $('.main-mega').slideUp( 400 ).fadeOut();
-   $(div_show_more).slideUp( 400 ).fadeIn();
- });
- $('.show-main-mega').click(function(){
-   $('.show-more-mega').fadeOut();
-   $('.main-mega').slideDown( 400 ).fadeIn();
- });
-</script>
+    
+    $('.show-more').click(function(){
+      var div_show_more = $(this).attr('value');
+      $('.main-mega').slideUp( 400 ).fadeOut();
+      $(div_show_more).slideUp( 400 ).fadeIn();
+    });
+    $('.show-main-mega').click(function(){
+      $('.show-more-mega').fadeOut();
+      $('.main-mega').slideDown( 400 ).fadeIn();
+    });
+  </script>
 </body>
 </html>
