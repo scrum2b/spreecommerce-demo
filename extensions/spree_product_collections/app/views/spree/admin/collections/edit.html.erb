@@ -9,10 +9,11 @@
 
 <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @collection } %>
 
+<h1>Collection Details</h1>
 <%= form_for [:admin, @collection], :method => :put, :html => { :multipart => true } do |f| %>
   <fieldset class="no-border-top">
     <div data-hook="admin_collection_form_fields">
-      <div class="left eight columns alpha" data-hook="admin_product_form_left">    
+      <div class="left eight columns alpha" data-hook="admin_product_form_left">
         <%= f.field_container :name do %>
           <%= f.label :name, raw(Spree.t(:name) + content_tag(:span, ' *', :class => 'required')) %>
           <%= f.text_field :name, :class => 'fullwidth title' %>
@@ -42,3 +43,9 @@
 
   </fieldset>
 <% end %>
+
+<h1>Collection Products</h1>
+<br/>
+<div id="collection_products" data-hook>
+  <%= render :partial => 'spree/admin/collections/products', :locals => {:collection => @collection} %>
+</div>

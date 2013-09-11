@@ -1,0 +1,47 @@
+
+<%= button_link_to Spree.t(:new_collection_product), new_admin_collection_product_url(collection), { :remote => true, :icon => 'icon-plus', :id => 'admin_new_collection_product' } %>
+
+<% if collection.products.empty? %>
+  <div id="new_collection_product" data-hook>
+  </div>
+  <div class="no-objects-found">
+    <%= Spree.t(:no_products_found) %>.
+  </div>
+<% else %>
+  <div id="new_collection_product" data-hook></div>
+  
+  <table class="index sortable" data-hook="products_table" data-sortable-link="<%= update_positions_admin_collection_products_url(collection) %>">
+    <colgroup>
+      <col style="width: 40%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+    </colgroup>
+    <thead>
+      <tr data-hook="products_header">
+        <th><%= Spree.t(:name) %></th>
+        <th><%= Spree.t(:thumbnail) %></th>
+        <th><%= Spree.t(:product_position) %></th>
+        <th class="actions"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% (collection.collection_products ).each do |collection_product| %>
+        <tr id="<%= spree_dom_id product %>" data-hook="products_row" class="<%= cycle('odd', 'even')%>">
+          <td>
+            <%= mini_image(collection_product.product) %>
+          </td>
+          <td><%= link_to collection_product.product.name, edit_admin_product_url(collection_product.product) %></td>
+          <td><%= collection_product.position %></td>
+          <td class="actions">
+            <%= link_to_with_icon 'icon-edit', Spree.t(:edit), edit_admin_product_url(collection_product.product), :no_text => true, :data => {:action => 'edit'} %>
+            <%= link_to_delete product, { :url => admin_collection_product_url(collection_product), :no_text => true } %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>
+
+

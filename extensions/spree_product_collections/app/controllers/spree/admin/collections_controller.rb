@@ -8,6 +8,7 @@ module Spree
     end
 
     def show
+      @collection_product = @collection.collection_products.new
     end
     
     def new
@@ -48,7 +49,7 @@ module Spree
     protected
   
     def find_resource
-      Collection.find_by_permalink!(params[:id])
+      @collection = Collection.find_by_permalink!(params[:id])
     end
 
     def location_after_save

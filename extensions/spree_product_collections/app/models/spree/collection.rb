@@ -13,6 +13,10 @@ module Spree
     def to_param
       permalink.present? ? permalink :  name.to_s.to_url
     end
+    
+    def product_count
+      self.collection_products.count
+    end
 
   end
 

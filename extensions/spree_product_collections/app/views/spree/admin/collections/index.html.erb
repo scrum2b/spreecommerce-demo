@@ -20,12 +20,14 @@
   <table class="index" id="listing_collections">
     <colgroup>
       <col style="width: 25%;">
-      <col style="width: 50%;">
+      <col style="width: 25%;">
+      <col style="width: 25%;">
       <col style="width: 25%;">
     </colgroup>
     <thead>
       <tr data-hook="admin_collections_index_headers">
         <th><%= Spree.t(:name) %></th>
+        <th><%= Spree.t(:product_count) %></th>
         <th><%= Spree.t(:description) %></th>
         <th data-hook="admin_collections_index_header_actions" class="actions"></th>
       </tr>  
@@ -33,7 +35,8 @@
     <tbody>
       <% @collections.each do |collection| %>
         <tr id="<%= spree_dom_id collection %>" data-hook="admin_collections_index_rows" class="<%= cycle('odd', 'even') %>">
-          <td><%= link_to collection.try(:name), edit_admin_collection_path(collection) %></td>
+          <td><%= link_to collection.try(:name), admin_collection_path(collection) %></td>
+          <td class="align-center"><%= collection.product_count %></td>
           <td class="align-center"><%= collection.description %></td>
             
 			    <td class="actions" data-hook="admin_collections_index_row_actions">

@@ -1,0 +1,21 @@
+<legend align="center"><%= Spree.t(:new_collection) %></legend>
+
+<%= form_for @collection_product, :url => new_admin_collection_product_url(@collection_product.collection), :method => :put, :html => {:mutipart => true} do |f| %>
+  <fieldset class="no-border-top">
+    <div data-hook="admin_collection_product_form_fields">
+      <div class="left eight columns alpha">
+        <%= f.field_container :product_name do %>
+          <%= f.label :product_name, Spree.t(:product_name) %> <span class="required">*</span><br />
+          <%= f.text_field :product_name, :class => "product_picker fullwidth" %>
+          <%= f.error_message_on :product_name %>
+        <% end %>
+      </div>
+    </div>
+  </div>  
+  <%= f.submit 'Add Product', :style => "margin-top: 30px;"%>
+  <script>
+  $(document).ready(function(){
+    $("#collection_product_product_name.product_picker").productAutocomplete();
+  });
+ </script>
+<% end %>
