@@ -29,6 +29,7 @@ Spree2Package::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   config.active_record.auto_explain_threshold_in_seconds = 0.5
 
+  config.assets.initialize_on_precompile = false
   # Do not compress assets
   config.assets.compress = false
 
