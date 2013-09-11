@@ -72,5 +72,16 @@ module Spree2Package
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+    
+    
+    ActionMailer::Base.smtp_settings = {
+      :address        => 'smtp.sendgrid.net',
+      :port           => '587',
+      :authentication => :plain,
+      :user_name      => ENV['SENDGRID_USERNAME'],
+      :password       => ENV['SENDGRID_PASSWORD'],
+      :domain         => 'scrum2b.com'
+    }
+
   end
 end
