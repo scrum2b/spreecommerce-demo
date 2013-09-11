@@ -1,7 +1,7 @@
 //= require store/spree_frontend
+//= require_tree .
 
 $('.li-category').mouseover(function() {
-  alert(1);
   $('#mega_nav_categories').show();
 });
 

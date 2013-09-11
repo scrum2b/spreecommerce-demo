@@ -5,10 +5,10 @@ s2b_spree_logo.png: s2b_spree_logo-96e2cd80ef60ac3f414b333b612a3d39.png
 s2b_spree_logo/index.png: s2b_spree_logo-96e2cd80ef60ac3f414b333b612a3d39.png
 admin/all.js: admin/all-52dc8a7a92b70cbc8dda638a99f52667.js
 admin/all/index.js: admin/all-52dc8a7a92b70cbc8dda638a99f52667.js
-application.js: application-bd04e637683287a199386ddcc4be6df0.js
-application/index.js: application-bd04e637683287a199386ddcc4be6df0.js
-store/all.js: store/all-255e0384a9e5b7cc64dc017cd6c12e1e.js
-store/all/index.js: store/all-255e0384a9e5b7cc64dc017cd6c12e1e.js
+application.js: application-7867229aa3b538c6c9d2560cbd13b057.js
+application/index.js: application-7867229aa3b538c6c9d2560cbd13b057.js
+store/all.js: store/all-c555ede47aa66c1d9a9f8b1e7b86416b.js
+store/all/index.js: store/all-c555ede47aa66c1d9a9f8b1e7b86416b.js
 admin/all.css: admin/all-f5adf2a7c7255264fff8b877866c7158.css
 admin/all/index.css: admin/all-f5adf2a7c7255264fff8b877866c7158.css
 application.css: application-e7190017e6168df7c628d27cc6622d91.css
@@ -83,8 +83,8 @@ credit_cards/master_cid.jpg: credit_cards/master_cid-0f3f2d19bde43db82790adb1029
 credit_cards/master_cid/index.jpg: credit_cards/master_cid-0f3f2d19bde43db82790adb1029f6d13.jpg
 credit_cards/visa_cid.gif: credit_cards/visa_cid-7c00fa695632a74d80ab7be8e884d5c5.gif
 credit_cards/visa_cid/index.gif: credit_cards/visa_cid-7c00fa695632a74d80ab7be8e884d5c5.gif
-favicon.ico: favicon.ico
-favicon/index.ico: favicon.ico
+favicon.ico: favicon-5fbccb20523a601986b6311e1e11f38a.ico
+favicon/index.ico: favicon-5fbccb20523a601986b6311e1e11f38a.ico
 icons/add-to-cart.png: icons/add-to-cart-555e866ae24931d25ee113188fce41b7.png
 icons/add-to-cart/index.png: icons/add-to-cart-555e866ae24931d25ee113188fce41b7.png
 icons/checkout.png: icons/checkout-aa44e0bb0e4e22e7249deda3a919c2ec.png
