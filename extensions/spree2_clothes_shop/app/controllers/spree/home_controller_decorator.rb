@@ -1,7 +1,8 @@
 module Spree
   HomeController.class_eval do
     def index
-      @products = Spree::Product.all
+      @searcher = build_searcher(params)
+      @products = @searcher.retrieve_products
     end
     
     def contact

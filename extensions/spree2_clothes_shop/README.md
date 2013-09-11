@@ -1,4 +1,4 @@
-Spree2ClothesShop
+SpreeSpree2ClothesShop
 ======================
 
 Introduction goes here.
@@ -9,7 +9,7 @@ Installation
 Add spree_spree2_clothes_shop to your Gemfile:
 
 ```ruby
-gem 'spree_spree2_clothes_shop',:git => 'https://github.com/scrum2b/spree2_clothes_shop.git'
+gem 'spree_spree2_clothes_shop'
 ```
 
 Bundle your dependencies and run the installation generator:

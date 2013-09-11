@@ -7,22 +7,20 @@
       </ul>
       <ul class="top-right">
         <li>Privacy Policy</li>
-        <li>Terms & Conditions</li>
+        <li>Terms &#36; Conditions</li>
       </ul>
     </div>
   </div>
   <br />
-  <div class="container">
-    
+  <div class="container">    
     <div class="span3 clo-footer">
       <h3>Our Products</h3>
       <ul>
-        <li><i class="icon-arrow-right"></i> &nbsp; <a href="/products">Product</a></li>
-        <li><i class="icon-arrow-right"></i> &nbsp; <a href="/products">Product</a></li>
-        <li><i class="icon-arrow-right"></i> &nbsp; <a href="/products">Product</a></li>
-        <li><i class="icon-arrow-right"></i> &nbsp; <a href="/products">Product</a></li>
-        <li><i class="icon-arrow-right"></i> &nbsp; <a href="/products">Product</a></li>
-        <li><i class="icon-arrow-right"></i> &nbsp; <a href="/products">Product</a></li>
+        <% if @taxon_categories%>
+          <%@taxon_categories.each do |taxon|%>
+            <li><i class="icon-arrow-right"></i> &nbsp;<%= link_to taxon.name, :controller => "taxons", :action => "show", :id => taxon.permalink %></li>
+          <% end %>
+        <% end %>
       </ul>     
     </div>
     

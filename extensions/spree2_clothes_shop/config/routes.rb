@@ -17,5 +17,7 @@ Spree::Core::Engine.routes.draw do
   get "/terms_conditions" => "home#terms_conditions"
   get "/privacy" => "home#privacy"
   
+  match "/categories/show" => "taxons#show"
+  
   
 end

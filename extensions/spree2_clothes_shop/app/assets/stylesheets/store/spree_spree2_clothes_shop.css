@@ -173,7 +173,7 @@ list-style: none;
 }
 #main-nav-bar ul{
 	_margin: 0; /*IE6 only*/
-	opacity: 0;
+	opacity: 0.9 !important;
 	visibility: hidden;
 	top: 54px;
 	left: 0;
@@ -227,8 +227,8 @@ list-style: none;
 	border: 0;
 	_line-height: 0; /*IE6 only*/
 	box-shadow: 0 1px 0 #111, 0 2px 0 #666;
-	text-align:center;
-	padding-right:20px;
+	text-align:left;
+	padding:15px;
 }
 
 #main-nav-bar ul li:last-child {   
@@ -298,9 +298,78 @@ list-style: none;
 	border-radius: 0 0 3px 3px;
 }
 
-#contact_us{
+#mega_nav_categories{
+  min-height:305px;
+  position:absolute;
+  top: 160px;
+  width: 100%;
+  padding-top:5px;
+  display:none;
+  z-index:9999999;
+  opacity: 0.9;
+  
+}
+.bg_mega_nav{
+  min-height:300px;
+  width: 100%;
+  background: #444; 
+  background: linear-gradient(#333, #111);
+  box-shadow: 0 -1px 0 rgba(255,255,255,.3);
+}
+.bg_mega_nav a:after{
+  content: '';
+  position: absolute;
+  left: 120px;
+  top: -5px;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #444;
+}
+.bg_mega_nav .clo-mega-nav, .bg_mega_nav .show-more-mega{
+padding-top: 20px;
+}
+.bg_mega_nav .clo-mega-nav ul.list-category{
+margin:0px 0px 10px 0px;
+list-style: none;
+overflow: hidden;
+height:180px;
+}
+.bg_mega_nav .clo-mega-nav li{
+padding: 5px 0px;
+}
+.bg_mega_nav .clo-mega-nav li a, .bg_mega_nav .show-more-mega ul li a{
+color:#999999;
+font-size:16px;
+text-transform: uppercase;
+font-weight: bold;
+}
+.bg_mega_nav ul li a:hover{
+  color: #fafafa;
+  text-decoration:none;
+}
+.bg_mega_nav .show-more-mega{
+  display:none;
+  margin-left:0px;
+  position:relative;
+}
+.bg_mega_nav .show-more-mega p.show-main-mega{
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  content: '';
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #fafafa;
+  cursor: pointer;
+}
+.bg_mega_nav .show-more-mega ul{
+  margin:0px;
+  list-style: none;
+}
+.bg_mega_nav .show-more-mega ul li{
+padding: 15px 0px;
+}
 
-}    
 .form-actions{
   background: none !important;
   border-top: none !important;
