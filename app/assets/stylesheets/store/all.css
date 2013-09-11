@@ -11,4 +11,6 @@
  *= require store/spree_product_collections
  *= require_tree .
  
+ *= require store/spree_self_delivery
+ *= require store/spree_multi_seller
 */

@@ -1,0 +1,22 @@
+en:
+  activerecord:
+    models:
+      self_delivery_point: Self delivery point
+    attributes:
+      self_delivery_point: 
+        country: Country
+        state: State
+        city: City
+        address1: Address
+        hours: Hours
+        description: Description
+        cost: Cost
+        show_country: Show country
+        show_state: Show state
+  self_delivery: Self delivery      
+  self_delivery_points: Self delivery points
+  new_self_delivery_point: New self delivery point
+  editing_self_delivery_point: Editing self delivery point
+  self_delivery_shipping_method_exists: Self delivery shipping method already exists
+  self_delivery_points_settings_description: Manage self delivery points
+  self_delivery_point_free: free

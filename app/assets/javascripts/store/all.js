@@ -11,3 +11,4 @@
 //= require store/spree_product_collections
 //= require store/spree_spree2_clothes_shop
 //= require_tree .
+//= require store/spree_multi_seller

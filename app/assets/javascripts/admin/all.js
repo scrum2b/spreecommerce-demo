@@ -11,3 +11,5 @@
 //= require admin/spree_product_collections
 //= require admin/spree_spree2_clothes_shop
 //= require_tree .
+//= require admin/spree_self_delivery
+//= require admin/spree_multi_seller
