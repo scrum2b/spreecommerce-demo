@@ -83,8 +83,8 @@ credit_cards/master_cid.jpg: credit_cards/master_cid-0f3f2d19bde43db82790adb1029
 credit_cards/master_cid/index.jpg: credit_cards/master_cid-0f3f2d19bde43db82790adb1029f6d13.jpg
 credit_cards/visa_cid.gif: credit_cards/visa_cid-7c00fa695632a74d80ab7be8e884d5c5.gif
 credit_cards/visa_cid/index.gif: credit_cards/visa_cid-7c00fa695632a74d80ab7be8e884d5c5.gif
-favicon.ico: favicon-5fbccb20523a601986b6311e1e11f38a.ico
-favicon/index.ico: favicon-5fbccb20523a601986b6311e1e11f38a.ico
+favicon.ico: favicon.ico
+favicon/index.ico: favicon.ico
 icons/add-to-cart.png: icons/add-to-cart-555e866ae24931d25ee113188fce41b7.png
 icons/add-to-cart/index.png: icons/add-to-cart-555e866ae24931d25ee113188fce41b7.png
 icons/checkout.png: icons/checkout-aa44e0bb0e4e22e7249deda3a919c2ec.png
