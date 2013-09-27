@@ -51,7 +51,7 @@
               <a href="#" value="#show-more-<%= category%>" style="font-size: 16px;text-decoration: none;color: #FAFAFA" class="show-more"">More...</a>
               <% end %>
             </div>  
-          <% end %> 
+          <% end if @nav_link %> 
         </div>    
         <% @nav_link.each do |category,links|%>
           <div class="row-fluid show-more-mega span12" id="show-more-<%= category%>">
@@ -63,7 +63,7 @@
               <% end %>
             </ul>
           </div>  
-        <% end %> 
+        <% end if @nav_link %> 
       </div>
     </div>              
   </section>

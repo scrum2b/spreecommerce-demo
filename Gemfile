@@ -36,25 +36,28 @@ gem 'jquery-rails'
 
 gem 'spree', '2.0.4'
 gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git',:branch => "2-0-stable"
-gem 'spree_shipment', :path => 'extensions/spree_shipment'
+#gem 'spree_shipment', :path => 'extensions/spree_shipment'
+#gem 'spree_active_shipping', :path => "extensions/spree_active_shipping" #REMOVE BECAUSE ERROR ON ORDERS
 
-gem 'activemerchant',         :github => 'dotandbo/active_merchant',        :branch => 'master'
+#gem 'spree_active_shipping', :git => "git://github.com/spree/spree_active_shipping"
+
+#gem 'activemerchant',         :github => 'dotandbo/active_merchant',        :branch => 'master'  #REMOVE BECAUSE ERROR ON ORDERS
 gem 'spree_related_products', :github => 'dotandbo/spree_related_products', :branch => 'master'
-gem 'spree_static_content',  :github => 'spree/spree_static_content',      :branch => '2-0-stable'
-gem 'spree_tax_cloud',        :github => 'dotandbo/spree_tax_cloud',        :branch => '2-0-stable'
+gem 'spree_static_content',   :github => 'spree/spree_static_content',      :branch => '2-0-stable'
+#gem 'spree_tax_cloud',        :github => 'dotandbo/spree_tax_cloud',        :branch => '2-0-stable'  #REMOVE BECAUSE ERROR ON ORDERS
 
 gem 'spree_spree2_clothes_shop', :path => 'extensions/spree2_clothes_shop'
 gem 'spree_product_collections', :path => 'extensions/spree_product_collections'
 #gem 'spree_spree2_clothes_shop',:git => 'https://github.com/scrum2b/spree2_clothes_shop.git'
 #gem 'spree_product_collections', github: 'scrum2b/spree_product_collections'
 
-gem 'spree_self_delivery', :path => 'extensions/spree_self_delivery'
+# gem 'spree_self_delivery', :path => 'extensions/spree_self_delivery'  #REMOVE BECAUSE ERROR ON ORDERS
 #gem 'spree_self_delivery', github: 'secoint/spree_self_delivery'
-gem 'spree_bank_transfer', :path => 'extensions/spree-bank-transfer'
+# gem 'spree_bank_transfer', :path => 'extensions/spree-bank-transfer'  #REMOVE BECAUSE ERROR ON ORDERS
 #gem 'spree_bank_transfer', :github => 'fuyo/spree-bank-transfer', :tag => 'v1.0.0' # github.com
 
-gem 'spree_multi_seller', github: 'pavelnikolov/spree_multi_seller'
-gem 'spree_group_pricing', github: 'jdutil/spree_group_pricing'
+#gem 'spree_multi_seller',  github: 'pavelnikolov/spree_multi_seller'  #REMOVE BECAUSE ERROR ON ORDERS
+#gem 'spree_group_pricing', github: 'jdutil/spree_group_pricing'  #REMOVE BECAUSE ERROR ON ORDERS
 
 #gem 'spree-pos', github: 'CodeCantor/spree-pos'
 #gem 'spree-pos', :path => 'extensions/spree-pos'

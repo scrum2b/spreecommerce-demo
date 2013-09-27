@@ -1,35 +1,35 @@
 <nav class="columns sixteen">
-<ul id="main-nav-bar" class="inline" data-hook>
-	<div class="container">
-  	<li id="home-link" data-hook><%= link_to t(:home), root_path %></li>
+<div class="container">
+  <ul id="main-nav-bar" class="inline" data-hook>
+		<li id="home-link" data-hook><%= link_to t(:home), root_path %></li>
   	<li class="li-category">
   		<a href="#">Categories</a>
   		
   	</li>
-  	<li><a href="/about">About</a>
+  	<li><a href="/about_us">About</a>
     	<ul class="ul-child">
-        <li><a href="/our_brand">our brand</a></li>
-        <li><a href="/press_media">press &amp; media</a></li>
-        <li><a href="/shipping">shipping</a></li>
-        <li><a href="#">legal</a>
+        <li><a href="/about_us/our_brand">our brand</a></li>
+        <li><a href="/about_us/press_media">press &amp; media</a></li>
+        <li><a href="/about_us/shipping">shipping</a></li>
+        <li><a href="/about_us/legal">legal</a>
           <ul class="ul-child">
-            <li><a href="/ip_fakes">ip &amp; fakes</a></li>
-            <li><a href="/terms_conditions">t &amp; c's'</a></li>
-            <li><a href="/privacy">privacy</a></li>
+            <li><a href="/about_us/legal/ip_fakes">ip &amp; fakes</a></li>
+            <li><a href="/about_us/legal/terms_conditions">terms & onditions</a></li>
+            <li><a href="/about_us/legal/privacy">privacy</a></li>
           </ul>
         </li>
       </ul>
     </li>
   	<li><a href="/contact">Contact</a>
   	  <ul class="ul-child">
-        <li><a href="/support">support</a></li>
-        <li><a href="#">trade</a>
+        <li><a href="/contact/support">support</a></li>
+        <li><a href="/contact/trade">trade</a>
            <ul class="ul-child">
-            <li><a href="/distribution">distribution</a></li>
-            <li><a href="/resellers">resellers</a></li>
-            <li><a href="/promotional">promotional</a></li>
-            <li><a href="/corporate">corporate</a></li>
-            <li><a href="/affiliates">affiliates</a></li>
+            <li><a href="/contact/trade/distribution">distribution</a></li>
+            <li><a href="/contact/trade/resellers">resellers</a></li>
+            <li><a href="/contact/trade/promotional">promotional</a></li>
+            <li><a href="/contact/trade/corporate">corporate</a></li>
+            <li><a href="/contact/trade/affiliates">affiliates</a></li>
           </ul>
         </li>
         <li><a href="/pr_contact">pr contacts</a></li>
@@ -40,13 +40,13 @@
 </nav>
 <script>
 	$(function() {
-  if ($.browser.msie && $.browser.version.substr(0,1)<7)
-  {
-	$('li').has('ul').mouseover(function(){
-		$(this).children('ul').css('visibility','visible');
-		}).mouseout(function(){
-		$(this).children('ul').css('visibility','hidden');
-		})
-  }
-}); 
+    if ($.browser.msie && $.browser.version.substr(0,1)<7)
+    {
+    	$('li').has('ul').mouseover(function(){
+    		$(this).children('ul').css('visibility','visible');
+    	}).mouseout(function(){
+    		$(this).children('ul').css('visibility','hidden');
+      })
+    }
+  }); 
 </script>
